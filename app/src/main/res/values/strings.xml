@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Me Talk Talk</string>
+    <string name="title_test">Mulai Tes</string>
+    <string name="title_account">Akun Saya</string>
+
+    <string name="test_record_stopped">Tahan tombol berikut untuk mulai merekam</string>
+    <string name="test_record_started">Lepas untuk berhenti merekam</string>
+</resources>
