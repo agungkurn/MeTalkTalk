@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setSize(SignInButton.SIZE_WIDE)
         if (currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         } else {
             setupLogin()
         }
