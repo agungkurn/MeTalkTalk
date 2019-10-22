@@ -5,4 +5,5 @@
 
     <string name="test_record_stopped">Tahan tombol berikut untuk mulai merekam</string>
     <string name="test_record_started">Lepas untuk berhenti merekam</string>
+    <string name="login_text">Dengan login menggunakan akun Google, perkembangan Anda akan tercatat di database kami dan dapat diakses melalui aplikasi ini</string>
 </resources>
