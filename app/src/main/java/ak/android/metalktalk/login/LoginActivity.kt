@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun setupLogin() {
+    private fun setupLogin() {
         btn_login.setOnClickListener {
             // Auth provider
             val provider = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
