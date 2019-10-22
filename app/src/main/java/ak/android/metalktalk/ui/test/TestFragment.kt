@@ -23,15 +23,14 @@ class TestFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-//        fab_record.setOnTouchListener { v, event ->
-//            if (event.action == MotionEvent.ACTION_DOWN) {
-//                tv_record_status.text = getString(R.string.test_record_started)
-//                Toast.makeText(requireContext(), "Pressed", Toast.LENGTH_SHORT).show()
-//            } else if (event.action == MotionEvent.ACTION_UP) {
-//                tv_record_status.text = getString(R.string.test_record_stopped)
-//                Toast.makeText(requireContext(), "Released", Toast.LENGTH_SHORT).show()
-//            }
-//            true
-//        }
+        fab_record.setOnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                tv_record_status.text = getString(R.string.test_record_started)
+            } else if (event.action == MotionEvent.ACTION_UP) {
+                tv_record_status.text = getString(R.string.test_record_stopped)
+                Toast.makeText(requireContext(), "Harap tunggu", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
     }
 }
