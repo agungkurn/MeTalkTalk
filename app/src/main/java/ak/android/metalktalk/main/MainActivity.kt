@@ -1,7 +1,7 @@
-package ak.android.metalktalk
+package ak.android.metalktalk.main
 
+import ak.android.metalktalk.R
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,7 +17,12 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        AppBarConfiguration(setOf(R.id.navigation_test, R.id.navigation_account)).also {
+        AppBarConfiguration(
+            setOf(
+                R.id.navigation_test,
+                R.id.navigation_account
+            )
+        ).also {
             setupActionBarWithNavController(navController, it)
         }
         nav_view.setupWithNavController(navController)

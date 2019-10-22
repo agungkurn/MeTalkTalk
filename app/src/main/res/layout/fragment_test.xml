@@ -5,19 +5,19 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_record_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_record_status"
+        android:layout_marginBottom="16dp"
         android:text="@string/test_record_stopped"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@id/fab_record"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintBottom_toTopOf="@id/fab_record" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_record"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="40dp"
         android:src="@drawable/ic_mic_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

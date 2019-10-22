@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:icon="@drawable/ic_account_circle_black_24dp"
+        app:key="user_name"
+        app:summary="anonymous@anywhere.any"
+        app:title="Akun Saya" />
+    <Preference
+        android:title="Perkembangan Saya"
+        app:key="progress" />
+    <Preference
+        app:key="logout"
+        app:summary="Keluar dari akun ini"
+        app:title="Keluar" />
+</androidx.preference.PreferenceScreen>

@@ -1,15 +1,14 @@
-package ak.android.metalktalk.fragments.account
+package ak.android.metalktalk.main.account
 
+import ak.android.metalktalk.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ak.android.metalktalk.R
 import androidx.lifecycle.ViewModelProviders
 
 class AccountFragment : Fragment() {
-
     private val accountViewModel by lazy {
         ViewModelProviders.of(this)[AccountViewModel::class.java]
     }
