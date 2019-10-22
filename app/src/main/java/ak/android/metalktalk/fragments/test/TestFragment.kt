@@ -1,4 +1,4 @@
-package ak.android.metalktalk.ui.test
+package ak.android.metalktalk.fragments.test
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
