@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditTextPreference
+        app:dialogTitle="Masukkan nama lengkap Anda"
+        app:key="nama_lengkap"
+        app:title="Nama lengkap" />
+    <DropDownPreference
+        app:entries="@array/jenis_kelamin"
+        app:entryValues="@array/jenis_kelamin"
+        app:key="jenis_kelamin"
+        app:title="Jenis Kelamin"
+        app:useSimpleSummaryProvider="true" />
     <Preference
-        app:icon="@drawable/ic_account_circle_black_24dp"
-        app:key="user"
-        app:summary="anonymous@anywhere.any"
-        app:title="Akun Saya" />
-    <Preference
-        android:title="Perkembangan Saya"
-        app:key="progress" />
-    <Preference
-        app:key="logout"
-        app:summary="Keluar dari akun ini"
-        app:title="Keluar" />
+        app:key="tanggal_lahir"
+        app:summary="00-00-0000"
+        app:title="Tanggal lahir" />
 </androidx.preference.PreferenceScreen>
