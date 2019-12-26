@@ -19,11 +19,13 @@ class TestViewModel(application: Application) : AndroidViewModel(application) {
 
     private var recorder: MediaRecorder? = null
 
+    private val path = "${context.cacheDir.absolutePath}/test.aac"
+
     internal fun startRecording() {
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
             setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS)
-            setOutputFile("${context.cacheDir.absolutePath}/test.aac")
+            setOutputFile(path)
             setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
 
             try {
@@ -43,15 +45,17 @@ class TestViewModel(application: Application) : AndroidViewModel(application) {
         }
         recorder = null
 
+        Toast.makeText(context, "Done!", Toast.LENGTH_SHORT).show()
+
         uploadFile()
     }
 
     private fun uploadFile() {
-        val fileToUpload = File("${context.cacheDir.absolutePath}/test.aac")
+        val fileToUpload = File(path)
         val fileUri = Uri.fromFile(fileToUpload)
 
         Toast.makeText(context, "Mengirim rekaman...", Toast.LENGTH_SHORT).show()
-        storage.child("test/${user?.email}/test")
+        storage.child("test/${user?.email}/test.aac")
             .putFile(fileUri)
             .addOnFailureListener {
                 Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
